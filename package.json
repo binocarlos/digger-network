@@ -1,0 +1,36 @@
+{
+  "name": "digger-network",
+  "version": "0.0.1",
+  "description": "The contract / request and reply modules for digger",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binocarlos/digger-network.git"
+  },
+  "keywords": [
+    "digger",
+    "network"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "6990a24fb5d3e9682469b71f810ea72ba4f7facc",
+  "bugs": {
+    "url": "https://github.com/binocarlos/digger-network/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "should": "~1.2.2",
+    "digger-container": "0.0.10",
+    "digger-client": "0.0.2"
+  },
+  "dependencies": {
+    "lodash": "~1.3.1",
+    "q": "~0.9.6",
+    "digger-utils": "~1.0.1",
+    "async": "~0.2.9"
+  }
+}
