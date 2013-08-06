@@ -1,6 +1,6 @@
 {
   "name": "digger-network",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The contract / request and reply modules for digger",
   "main": "src/index.js",
   "scripts": {
