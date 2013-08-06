@@ -1,5 +1,6 @@
 var digger = require('../src');
 var async = require('async');
+var utils = require('digger-utils');
 
 describe('response', function(){
 
@@ -21,6 +22,20 @@ describe('response', function(){
   it('should construct with a callback function', function(done) {
     var res = digger.response(done);
     res.send();
+  })
+
+  it('should send containers', function(done) {
+
+    var res = digger.response();
+
+    res.on('send', function(){
+      res.getHeader('content-type').should.equal('application/json');
+      utils.isArray(res.body).should.equal(true);
+      done();
+    })
+
+    res.containers({test:10});
+
   })
 
   it('should build from raw data', function() {

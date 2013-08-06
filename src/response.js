@@ -21,6 +21,7 @@ var util = require('util');
 var Message = require('./message');
 var _ = require('lodash');
 var Q = require('q');
+var utils = require('digger-utils');
 
 /*
 
@@ -191,6 +192,17 @@ Response.prototype.hasError = function(){
 Response.prototype.sendError = function(text){
   this.statusCode = 500;
   this.send(text);
+}
+
+Response.prototype.containers = function(arr){
+  this.setHeader('content-type', 'application/json');
+  if(!arr){
+    arr = [];
+  }
+  else if(!utils.isArray(arr)){
+    arr = [arr];
+  }
+  this.send(arr);
 }
 
 Response.prototype.send404 = function(req){
